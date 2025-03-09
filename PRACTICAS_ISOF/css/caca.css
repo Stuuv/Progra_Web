@@ -1,0 +1,39 @@
+.wea{
+    background-color: rgb(88, 230, 70);
+    width:300px;
+    margin:auto;
+}
+
+.goku{
+    display: flex;
+}
+.goku div{
+    width:34%;  
+}
+.vegetta{
+    display: grid;
+    grid-template-columns: 33.5% 33.5% 33.5%;
+    margin-top: 10px;
+}
+.vegetta div{
+    margin: 5px;
+}
+.vegetta div h2{
+    margin-left: 10px;
+}
+.vegetta div p{
+    margin-left: 10px;
+}
+.city {
+    background-color: tomato;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+  }
+#myHeader{
+    background-color: lightblue;
+    color: black;
+    padding: 40px;
+    text-align: center;
+}

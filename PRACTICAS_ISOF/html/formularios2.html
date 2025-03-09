@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/stylesformularios.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Formulario de Registro</h2>
+        <form action="http://localhost/PRACTICAS_ISOF/php/formularios.php" method="POST">
+        
+            <div class="form-group">
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required maxlength="10">
+            </div>
+            
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required pattern="[A-Za-z ]+">
+            </div>
+            
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+            </div>
+            
+            <input type="submit" value="Enviar">
+        </form>
+
+</body>
+
+<script>
+    function validarFormulario() {
+        const matricula = document.getElementById('matricula').value;
+        // Puedes agregar más validaciones aquí
+        if (matricula.length < 3) {
+            alert('La matrícula debe tener al menos 3 caracteres');
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>
