@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PUT') {
         isset($data['direccion'])
     ) {
         try {
-            $stmt = $conn->prepare("UPDATE tblalumnos SET 
+            $stmt = $conn->prepare("UPDATE alumnos SET 
                 nombre = ?, 
                 direccion = ? 
                 WHERE matricula = ?");
