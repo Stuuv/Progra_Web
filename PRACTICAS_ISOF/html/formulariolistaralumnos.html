@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabla de Alumnos</title>
+
+    <link rel="stylesheet" href="../css/stylesformularios.css" />
+    
+  </head>
+  <body>
+    <h1>Lista de Alumnos</h1>
+
+    <button class="btn-agregar" onclick="mostrarModalAgregar()">
+      Agregar Alumno
+    </button>
+
+    <!-- Modal para Agregar/Editar -->
+    <div id="modalFormulario" class="modal">
+      <div class="modal-contenido">
+        <h2 id="modalTitulo">Agregar Nuevo Alumno</h2>
+        <form id="formularioAlumno" onsubmit="guardarAlumno(event)">
+          <div class="form-group">
+            <label for="matriculaEditar">Matricula:</label>
+            <input type="text" id="matriculaEditar" required />
+          </div>
+          <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" required />
+          </div>
+
+          <div class="botones-accion">
+            <button type="submit">Guardar</button>
+            <button type="button" onclick="cerrarModal()">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <table id="tablaAlumnos">
+      <thead>
+        <tr>
+          <th>Matrícula</th>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaAlumnosBody"></tbody>
+    </table>
+
+    <!-- Controles de paginación -->
+    <div class="paginacion" id="controlesPaginacion"></div>
+
+    <div class="registros-por-pagina">
+      <label>Registros por página: </label>
+      <select
+        id="registrosPorPagina"
+        onchange="cambiarRegistrosPorPagina(this.value)"
+      >
+        <option value="5">5</option>
+        <option value="10" selected>10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+
+    <script src="../js/formlistaralumnos.js"></script>
+  </body>
+</html>
